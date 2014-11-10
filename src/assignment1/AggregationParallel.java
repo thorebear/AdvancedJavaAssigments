@@ -11,10 +11,10 @@ public class AggregationParallel<A> implements Aggregation<A> {
     @Override
     public int aggregate(Combination<A> c, List<A> l) {
         /*
-            A empty list have the result 0.
+            A empty list have the neutral result.
          */
         if (l.size() == 0){
-            return 0;
+            return c.neutral();
         }
 
         List<Integer> values = new ArrayList<Integer>();

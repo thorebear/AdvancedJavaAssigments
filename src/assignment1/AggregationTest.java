@@ -38,12 +38,11 @@ public class AggregationTest {
     }
 
     private void testAggregation(Aggregation<Employee> a) {
-        List<Employee> list = dataSet();
-        a.aggregate(new AddSalary(), list);
-        int sum = 0;
-        for (Employee e : list){
-            sum += e.getSalary();
+        int i = 1000;
+        while (i-- > 0) {
+            List<Employee> list = dataSet();
+            int sum = a.aggregate(new AddSalary(), list);
+            assertEquals(113319, sum);
         }
-        assertEquals(113319, sum);
     }
 }
