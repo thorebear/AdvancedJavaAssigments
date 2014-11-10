@@ -11,7 +11,7 @@ public interface Aggregation<T> {
 	 * @param c
 	 *            The combination to aggregate with (*).
 	 * @param l
-	 *            A list of values [e_1,...e_k].
+	 *            A list of va,es [e_1,...e_k].
 	 * @return The aggregation e_1 * ... * e_k.
 	 */
 	public int aggregate(Combination<T> c, List<T> l);
